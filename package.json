@@ -1,22 +1,27 @@
 {
-  "name": "download-with-progressbar",
-  "version": "0.9.0",
-  "description": "",
+  "name": "file-download-with-progressbar",
+  "version": "0.1.2",
+  "description": "Download files with multiple progressbar",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shixiaobao17145/download-with-progressbar"
+    "url": "git+https://github.com/shixiaobao17145/download-with-progressbar.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bob",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "cli-progress": "^3.8.2",
     "filesize": "^6.1.0",
     "got": "^11.8.0",
     "got-resume": "^2.0.3",
     "pretty-ms": "^7.0.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/shixiaobao17145/download-with-progressbar/issues"
+  },
+  "homepage": "https://github.com/shixiaobao17145/download-with-progressbar#readme",
+  "devDependencies": {}
 }

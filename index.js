@@ -18,7 +18,7 @@ const defaultMultiBarOpts = {
         // console.log('payload', eta);
         const bar = options.barCompleteString.substr(0, Math.round(params.progress * options.barsize));
 
-        return `[ ${bar} ] | "${filename}" | "${percentage}%" | ETA: ${eta == 'NULL' ? 0 : prettyms(eta * 1000)} | ${filesize(value)}/${filesize(total)}`;
+        return `[ ${bar} ] | "${filename}" | "${percentage}%" | ETA: ${eta == 'NULL' ? 0 : Number.isFinite(eta) ? prettyms(eta * 1000) : 'Unknown'} | ${filesize(value)}/${filesize(total)}`;
     },
     // 02160389313,
     // 13774446668
@@ -26,7 +26,8 @@ const defaultMultiBarOpts = {
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
     // clearOnComplete: true,
-    stopOnComplete: true
+    stopOnComplete: true,
+    forceRedraw: true
 }
 
 let defaultMultiBarGetter = (function () {
